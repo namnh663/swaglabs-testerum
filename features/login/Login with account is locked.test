@@ -1,0 +1,9 @@
+test-def: Login with account is locked
+
+    tags = <<negative>>
+
+    step: Given the page at url <<{{url}}>> is open
+    step: When I type <<{{locked}}>> into the field <<{{username}}>>
+    step: When I type <<{{pass_for_all}}>> into the field <<{{password}}>>
+    step: When I click the element <<xpath=//*[@id='login-button']>>
+    step: Then the text of element <<xpath=//*[@data-test="error"]>> should be <<Epic sadface: Sorry, this user has been locked out.>>

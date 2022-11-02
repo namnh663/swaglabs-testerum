@@ -1,0 +1,12 @@
+{
+  "defaultVariables" : {
+    "home_page_url" : "https://www.saucedemo.com/inventory.html",
+    "locked" : "locked_out_user",
+    "pass_for_all" : "secret_sauce",
+    "password" : "xpath=//*[@id='password']",
+    "standard" : "standard_user",
+    "url" : "https://www.saucedemo.com",
+    "username" : "xpath=//*[@id='user-name']"
+  },
+  "environments" : { }
+}

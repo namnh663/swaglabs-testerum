@@ -1,0 +1,17 @@
+test-def: Login then logout
+
+    tags = <<positive>>
+
+    step: Given the page at url <<{{url}}>> is open
+    step: When I type <<{{standard}}>> into the field <<{{username}}>>
+    step: When I type <<{{pass_for_all}}>> into the field <<{{password}}>>
+    step: When I click the element <<xpath=//*[@id='login-button']>>
+    step: Then the url of the current page should be <<{{home_page_url}}>>
+    step: Then the text of element <<xpath=//*[@class="title"]>> should be <<Products>>
+    step: When I wait until the element <<xpath=//*[@class="bm-burger-button"]>> is visible
+    step: When I click the element <<xpath=//*[@class="bm-burger-button"]>>
+    step: When I wait until the element <<xpath=//*[@id="logout_sidebar_link"]>> is visible
+    step: When I click the element <<xpath=//*[@id="logout_sidebar_link"]>>
+    step: Then the url of the current page should be <<{{url}}>>
+    step: Then the text of element <<{{username}}>> should not be << >>
+    step: Then the text of element <<{{password}}>> should not be << >>
